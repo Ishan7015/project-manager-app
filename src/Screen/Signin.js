@@ -1,14 +1,21 @@
 import React, { useContext, useState } from 'react';
 import signinStyle from '../Styles/Signin.module.css';
 import routeContext from '../context/RouteContext';
+import userContext from '../context/UserContext';
 import { users } from '../TempDb';
 
 const Signin = () => {
-
+  //onRouteChange handels route state change
   const { onRouteChange } = useContext(routeContext);
+
+  //Function to change current user on sign in
+  const { updateCurrentUser } = useContext(userContext);
+
+  //Email and password state to comapare inputs with database
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  //Update function to update Email and Password state on user input
   const onPasswordChange = (e) => {
     setPassword(e.target.value);
   }
@@ -16,10 +23,16 @@ const Signin = () => {
     setEmail(e.target.value);
   }
 
+  //Function to compare users input credentials with the database
   const authUser = () => {
     users.forEach(user => {
       if (user.email === email && user.password === password) {
         onRouteChange('project');
+        updateCurrentUser({
+          name: user.name,
+          email: user.email,
+          company: user.company
+        })
       } 
     })
   }

@@ -1,0 +1,66 @@
+.form {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(117, 109, 255, 1) 0%, rgba(97, 208, 255, 1) 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    padding: 1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container input {
+    margin: 0.5em;
+    padding: 0.25em;
+    background-color: aliceblue;
+    border: none;
+    border: 1px solid black;
+    border-radius: 0.15em;
+}
+
+.container button {
+    margin: 0.5em;
+}
+
+.signinBtn {
+    padding: 0.7em 1.2em;
+    border: none;
+    border-radius: 0.2em;
+    background-color: rgb(83, 221, 255);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.forgetBtn {
+    background-color: transparent;
+    font-size: 0.5em;
+    border: none;
+    cursor: pointer;
+}
+
+.forgetBtn:hover {
+    text-decoration: underline;
+}
+
+.container h4 {
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+.container h4 span {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.container h4 span:hover {
+    text-decoration: underline;
+}

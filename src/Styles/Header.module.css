@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(202, 255, 241);
+}
+
+.header h1{
+    cursor: pointer;
+}
+
+.navLink{
+    display: flex;
+}
+
+.navLink li{
+    margin: 1em;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navLink li:hover{
+    text-decoration: underline;
+}

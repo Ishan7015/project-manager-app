@@ -2,10 +2,14 @@ import React, { useContext, useState } from 'react';
 import signupStyle from '../Styles/Signup.module.css';
 import routeContext from '../context/RouteContext';
 import { users } from '../TempDb';
+import UserContext from '../context/UserContext';
 
 const Signup = () => {
     //onRouteCgange to handle change of route state
     const { onRouteChange } = useContext(routeContext);
+
+    //Upadte current user on signup
+    const { updateCurrentUser } = useContext(UserContext);
 
     //State to store new users data
     const [name, setName] = useState('');
@@ -23,8 +27,9 @@ const Signup = () => {
     const onNameChange = (e) => {
         setName(e.target.value);
     }
+    
     const addNewUser = (name, email, password, company) => {
-        let isUnique = true;
+        let isUnique = true;        //Boolean for whether the user name of email already exist
         users.forEach(user => { 
             if (user.name === name || user.email === email) isUnique = false;
         });       
@@ -39,8 +44,14 @@ const Signup = () => {
                 password,
                 company
             });
+
+            updateCurrentUser({
+                name,
+                email,
+                company
+            });
+
             onRouteChange('project');
-            console.log(users);
         }
     }
 

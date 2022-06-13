@@ -68,7 +68,7 @@ export const projects = [
         description:  lorem
     },
     {
-        title: 'Space Tourism',
+        title: 'Movie API',
         lead: 'Ishan Pandey',
         dueDate: '25-June-2022',
         priority: 'Critical',

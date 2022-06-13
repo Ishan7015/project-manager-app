@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Table = () => {
+const Table = ({ title, lead, dueDate, priority }) => {
     return (
-        <div>
-            
-        </div>
+      <tr>
+        <td>{ title }</td>
+        <td>{ lead }</td>
+        <td>{ priority }</td>
+        <td>{ dueDate }</td>
+      </tr>
   )
 }
 

@@ -28,4 +28,4 @@ contact me and we will get to work ASAP.
 
 ## Feedback
 
-If you have any feedback, please reach out to us at ip.contactto@gmail.com
+If you have any feedback, please reach out to me at ip.contactto@gmail.com

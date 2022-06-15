@@ -29,6 +29,15 @@
     text-align: center;
 }
 
-.table tr:nth-child(even){
+.table tbody tr{
+    cursor: pointer;
+}
+
+
+.table tbody tr:nth-child(odd) {
     background-color: rgb(236, 236, 236);
+}
+
+.table tbody tr:hover {
+    background-color: rgb(148, 190, 192);
 }

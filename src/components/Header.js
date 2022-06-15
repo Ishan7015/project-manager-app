@@ -12,7 +12,7 @@ const Header = () => {
             <h1>Orion Projects</h1>
             <ul className={HeaderStyle.navLink}>
                 <li>Profile</li>
-                <li>Projects</li>
+                <li onClick={()=>onRouteChange('project')}>Projects</li>
                 <li>Add Project</li>
                 <li onClick={()=>onRouteChange('signin')}>SignOut</li>
             </ul>    

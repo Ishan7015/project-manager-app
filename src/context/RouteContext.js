@@ -5,6 +5,7 @@ const routeContext = createContext();
 export function RouteProvider({ children }) {
     const [route, setRoute] = useState('signin');
 
+    //Function to change current route for rerouting
     const onRouteChange = (newRoute) => {
         setRoute(newRoute);
     }

@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import Header from './components/Header';
 import routeContext from './context/RouteContext';
 import Projcet from './Screen/Projcet';
+import ProjectPage from './Screen/ProjectPage';
 import Signin from './Screen/Signin';
 import Signup from './Screen/Signup';
 
@@ -20,6 +21,12 @@ const App = () => {
       <Projcet />
     </>);
     if (route === 'signup') return (<Signup />);
+    if (route === 'projectPage') return (
+      <>
+        <Header />
+        <ProjectPage />
+      </>  
+    )
   }
 
   return (
